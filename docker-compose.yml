@@ -8,7 +8,7 @@ services:
     networks:
       - backend
     volumes:
-      - ${PROJECT_ROOT}/:/var/www/html/
+      - ./src:/var/www/html/
     container_name: php
   apache:
     build:
@@ -36,10 +36,10 @@ services:
     networks:
       - backend
     environment:
-      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
-      MYSQL_DATABASE: "${DB_NAME}"
-      MYSQL_USER: "${DB_USERNAME}"
-      MYSQL_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: 'Freenoff@9'
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'Freenoff@9'
     container_name: mysql
 networks:
   frontend:
